@@ -853,7 +853,7 @@ def create_dtbo_image_from_config(fout, argv):
     params = {}
     dt_entries = []
     for dt_arg in dt_args:
-        filepath = args.dtbdir + os.sep + dt_arg['filename']
+        filepath = dt_arg['filename']
         params['dt_file'] = open(filepath, 'rb')
         params['dt_offset'] = 0
         params['dt_size'] = os.fstat(params['dt_file'].fileno()).st_size
